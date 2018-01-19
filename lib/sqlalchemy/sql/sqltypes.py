@@ -1437,6 +1437,7 @@ class Enum(Emulated, String, SchemaType):
         kw.setdefault('metadata', self.metadata)
         kw.setdefault('_create_events', False)
         kw.setdefault('native_enum', self.native_enum)
+        kw.setdefault('values_callable', self.values_callable)
         assert '_enums' in kw
         return impltype(**kw)
 
